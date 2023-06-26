@@ -7,15 +7,17 @@
     <title>Simon Says</title>
   </head>
   <body>
+    <button class="startButton" onclick="play()">Start</button>
     <div class="gameContainer">
       <div class="topRow">
-        <div class="topLeft"></div>
-        <div class="topRight"></div>
+        <div class="topLeft" data-tile="green"></div>
+        <div class="topRight" data-tile="red"></div>
       </div>
       <div class="bottomRow">
-        <div class="bottomLeft"></div>
-        <div class="bottomRight"></div>
+        <div class="bottomLeft" data-tile="yellow"></div>
+        <div class="bottomRight" data-tile="blue"></div>
       </div>
+      <div class="innerCircle"></div>
     </div>
     <script src="app.js"></script>
   </body>

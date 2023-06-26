@@ -1,31 +1,37 @@
-// start the game
-
-// start the sequence
-// taget tiles and put avalible options in an array
-// generate a random number that is no longer than the array
-
-// media querries
-let startButton = document.querySelector(".startButton");
-let green = document.querySelector(".topLeft");
-let red = document.querySelector(".topRight");
-let yellow = document.querySelector(".bottomLeft");
-let blue = document.querySelector(".bottomRight");
-
-// Start the round
+// keep track of original sequence
+let sequence = [];
+// array that stores player input
+let playerSequence = [];
+// create start level
 let level = 0;
 
-// keep track of the sequence for the computer and the player
+// flash colors when tile is activated in the sequence array
+function flashTile(color) {
+  const title = document.querySelector(`[data-tile='${color}']`);
+}
 
-// Next Round
+// add step to the existing sequence
+const addStep = () => {
+  const tile = ["green", "red", "yellow", "blue"];
+  const randomSequence =
+    tile[Math.random(Math.random() * DataTransferItemList.length)];
+  return randomSequence;
+};
 
-// increment round number
+// next level
+const nextRound = () => {
+  // increment level by 1
+  level += 1;
 
-// add a new step to the existing sequence
-// push sequnce to the DOM
+  //   copy all of the elements in the sequence array into the newSequence array
+  let newSequence = [...sequence];
+};
 
-// allow for player input after sequence
+// Query Selectors
+let startButton = document.querySelector(".startButton");
+let green = document.querySelector(".topLeft");
+let red = document.querySelector(".top");
+let yellow = document.querySelector(".topLeft");
+let blue = document.querySelector(".topLeft");
 
-// compare computer sequence to player sequence
-// if correct, go to next round
-// after 5 rounds - win state
-// if incorrect, lose state
+// Start the game
