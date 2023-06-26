@@ -1,0 +1,42 @@
+.gameContainer {
+  border: solid purple;
+  margin: 0 auto;
+  border: solid black;
+  width: 50%;
+  height: 75vh;
+}
+
+.topRow {
+  display: flex;
+}
+
+.bottomRow {
+  display: flex;
+}
+
+.topLeft {
+  border: solid black;
+  background-color: green;
+  height: 37vh;
+  width: 50%;
+}
+.topRight {
+  border: solid black;
+  background-color: red;
+  height: 37vh;
+  width: 50%;
+}
+
+.bottomLeft {
+  border: solid black;
+  background-color: yellow;
+  height: 37vh;
+  width: 50%;
+}
+
+.bottomRight {
+  border: solid black;
+  background-color: blue;
+  height: 37vh;
+  width: 50%;
+}
