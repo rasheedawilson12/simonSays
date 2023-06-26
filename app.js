@@ -15,25 +15,13 @@ let blue = document.querySelector(".bottomRight");
 let level = 0;
 
 // keep track of the sequence for the computer and the player
-const sequence = [];
-const playerSequence = [];
 
 // Next Round
-const nextRound = () => {
-  // increment round number
-  level += 1;
-  const nextSequence = [...sequence];
-  nextSequence.push(nextSequence());
-};
+
+// increment round number
 
 // add a new step to the existing sequence
 // push sequnce to the DOM
-const newSequence = () => {
-  let tiles = [green, red, yellow, blue];
-  let randomSequence = tiles[Math.floor(Math.random() * tiles.length)];
-
-  return randomSequence;
-};
 
 // allow for player input after sequence
 
