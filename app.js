@@ -104,7 +104,6 @@ function startGame() {
   nextRound();
 }
 
-startButton.addEventListener("click", startGame);
 gameContainer.addEventListener("click", (event) => {
   const { panel } = event.target.dataset;
 
