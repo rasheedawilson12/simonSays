@@ -7,17 +7,20 @@
     <title>Document</title>
   </head>
   <body>
-    <button class="startButton" onclick="startGame()">START</button>
+    <h1 class="heading">Simon Says</h1>
     <div class="simon">
       <div class="topRow">
-        <div class="panel topLeftPanel" onclick="toggleColor()"></div>
-        <div class="panel topRightPanel"></div>
+        <div class="panel topLeftPanel" data-panel="green"></div>
+        <div class="panel topRightPanel" data-panel="red"></div>
       </div>
       <div class="bottomRow">
-        <div class="panel bottomLeftPanel"></div>
-        <div class="panel bottomRightPanel"></div>
+        <div class="panel bottomLeftPanel" data-panel="yellow"></div>
+        <div class="panel bottomRightPanel" data-panel="blue"></div>
       </div>
     </div>
+    <button class="startButton" onclick="startGame()">START</button>
+    <span class="info hidden"></span>
+
     <!-- <div class="center"></div> -->
 
     <script src="app.js"></script>

@@ -3,30 +3,116 @@ let sequence = [];
 // array to store player sequence
 let playerSequence = [];
 // counter
-let counter = 1;
+let level = 0;
 
-// media queries
-let start = document.querySelector(".startButton");
-let green = document.querySelector(".topLeftPanel");
-let red = document.querySelector(".topLeftPanel");
-let yellow = document.querySelector(".topLeftPanel");
-let blue = document.querySelector(".topLeftPanel");
+const startButton = document.querySelector(".startButton");
+const info = document.querySelector(".info");
+const heading = document.querySelector(".heading");
+const gameContainer = document.querySelector(".simon");
 
-// array of colors
-let allColors = [green, red, yellow, blue];
+function resetGame(text) {
+  alert(text);
+  sequence = [];
+  playerSequence = [];
+  level = 0;
+  startButton.classList.remove("hidden");
+  heading.textContent = "Simon Game";
+  info.classList.add("hidden");
+  gameContainer.classList.add("unclickable");
+}
 
-// create random sequence
+function playerTurn(level) {
+  gameContainer.classList.remove("unclickable");
+  info.textContent = `Your turn: ${level} Tap${level > 1 ? "s" : ""}`;
+}
 
-// function to toggle active class so that the colors flash while the sequence is going
-const toggleColor = () => {
-  green.classList.toggle("active");
-};
+function flashColor(color) {
+  const panel = document.querySelector(`[data-panel='${color}']`);
+  panel.classList.add("active");
 
-//start game
+  setTimeout(() => {
+    panel.classList.remove("active");
+  }, 300);
+}
 
-// compare the sequence to the player sequence
+function playRound(nextSequence) {
+  nextSequence.forEach((color, index) => {
+    setTimeout(() => {
+      flashColor(color);
+    }, (index + 1) * 600);
+  });
+}
 
-// go to next round if correct
+function nextStep() {
+  const panels = ["red", "green", "blue", "yellow"];
+  const random = panels[Math.floor(Math.random() * panels.length)];
 
-// Lose state if incorrect
-// win state once all levels have been cleared
+  return random;
+}
+
+function nextRound() {
+  level += 1;
+
+  gameContainer.classList.add("unclickable");
+  info.textContent = "Wait for the computer";
+  heading.textContent = `Level ${level} of 20`;
+
+  const nextSequence = [...sequence];
+  nextSequence.push(nextStep());
+  playRound(nextSequence);
+
+  sequence = [...nextSequence];
+  setTimeout(() => {
+    playerTurn(level);
+  }, level * 600 + 1000);
+}
+
+function playerInput(panel) {
+  const index = playerSequence.push(panel) - 1;
+
+  const remainingTaps = sequence.length - playerSequence.length;
+
+  if (playerSequence[index] !== sequence[index]) {
+    resetGame("Oops! Game over, you pressed the wrong panel");
+    return;
+  }
+
+  if (playerSequence.length === sequence.length) {
+    if (playerSequence.length === 20) {
+      resetGame("Congrats! You completed all the levels");
+      return;
+    }
+
+    playerSequence = [];
+    info.textContent = "Success! Keep going!";
+    setTimeout(() => {
+      nextRound();
+    }, 1000);
+    return;
+  }
+
+  info.textContent = `Your turn: ${remainingTaps} Tap${
+    remainingTaps > 1 ? "s" : ""
+  }`;
+}
+
+function startGame() {
+  startButton.classList.add("hidden");
+  info.classList.remove("hidden");
+  info.textContent = "Wait for the computer";
+  nextRound();
+}
+
+startButton.addEventListener("click", startGame);
+gameContainer.addEventListener("click", (event) => {
+  const { panel } = event.target.dataset;
+
+  if (panel) playerInput(panel);
+});
+
+startButton.addEventListener("click", startGame);
+tileContainer.addEventListener("click", (event) => {
+  const { tile } = event.target.dataset;
+
+  if (tile) handleClick(tile);
+});
