@@ -5,28 +5,28 @@ let playerSequence = [];
 // counter
 let level = 0;
 
+// query selectors
 const startButton = document.querySelector(".startButton");
 const info = document.querySelector(".info");
 const heading = document.querySelector(".heading");
 const gameContainer = document.querySelector(".simon");
-const counter = counter;
+const counter = document.querySelector(".counter");
 
+// reset game function
 function resetGame(text) {
   alert(text);
   sequence = [];
   playerSequence = [];
   level = 0;
-  startButton.classList.remove("hidden");
-  heading.textContent = "Simon Game";
-  info.classList.add("hidden");
   gameContainer.classList.add("unclickable");
 }
 
-function playerTurn(level) {
+// make panels unlickable while it is the computers turn
+function playerTurn() {
   gameContainer.classList.remove("unclickable");
-  info.textContent = `Your turn: ${level} Tap${level > 1 ? "s" : ""}`;
 }
 
+// toggle colors on and off during the sequence
 function flashColor(color) {
   const panel = document.querySelector(`[data-panel='${color}']`);
   panel.classList.add("active");
@@ -44,20 +44,24 @@ function playRound(nextSequence) {
   });
 }
 
+// create the next step in the squence
 function nextStep() {
+  // create array of functions that contain all of the panels.
   const panels = ["red", "green", "blue", "yellow"];
+  // create random number the length of the array
   const random = panels[Math.floor(Math.random() * panels.length)];
+  // return the array index with the index of the random number that was choosen
 
   return random;
 }
 
 function nextRound() {
-  level += 1;
-
+  // increment level by one
+  level++;
+  // make the panels unclickable while the computer is flashing
   gameContainer.classList.add("unclickable");
-  info.textContent = "Wait for the computer";
-  heading.textContent = `Level ${level} of 20`;
-
+  counter.innerHTML = `${level}`;
+  // add the elements of the sequence with the nextStep function and create a nextSequence array with all elements inside and in the correct order.
   const nextSequence = [...sequence];
   nextSequence.push(nextStep());
   playRound(nextSequence);
@@ -69,18 +73,18 @@ function nextRound() {
 }
 
 function playerInput(panel) {
+  // push player cick input into player array
   const index = playerSequence.push(panel) - 1;
-
-  const remainingTaps = sequence.length - playerSequence.length;
-
+  // compare the player input to the computer sequence
+  // lose state
   if (playerSequence[index] !== sequence[index]) {
-    resetGame("Oops! Game over, you pressed the wrong panel");
+    alert("Oops! Game over, you pressed the wrong panel");
     return;
   }
-
+  // win state
   if (playerSequence.length === sequence.length) {
     if (playerSequence.length === 20) {
-      resetGame("Congrats! You completed all the levels");
+      alert("Congrats! You completed all the levels");
       return;
     }
 
@@ -91,16 +95,12 @@ function playerInput(panel) {
     }, 1000);
     return;
   }
-
-  info.textContent = `Your turn: ${remainingTaps} Tap${
-    remainingTaps > 1 ? "s" : ""
-  }`;
 }
 
 function startGame() {
-  startButton.classList.add("hidden");
-  info.classList.remove("hidden");
-  info.textContent = "Wait for the computer";
+  sequence = [];
+  playerSequence = [];
+  level = 0;
   nextRound();
 }
 
@@ -109,11 +109,4 @@ gameContainer.addEventListener("click", (event) => {
   const { panel } = event.target.dataset;
 
   if (panel) playerInput(panel);
-});
-
-startButton.addEventListener("click", startGame);
-tileContainer.addEventListener("click", (event) => {
-  const { tile } = event.target.dataset;
-
-  if (tile) handleClick(tile);
 });
