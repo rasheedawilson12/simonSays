@@ -97,6 +97,14 @@ function playerInput(panel) {
   }
 }
 
+const lastSequence = (color, index) => {
+  sequence.forEach((color, index) => {
+    setTimeout(() => {
+      flashColor(color);
+    }, (index + 1) * 600);
+  });
+};
+
 function startGame() {
   sequence = [];
   playerSequence = [];

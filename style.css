@@ -45,6 +45,10 @@ h1 {
   background-color: mediumblue;
 }
 
+/* .unclickable {
+  pointer-events: none;
+} */
+
 .active {
   filter: brightness(200%);
 }
