@@ -49,13 +49,31 @@ h1 {
   display: none;
 }
 
-.center {
-  display: inline-block;
+.innerCircle {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 100%;
-  background-color: gray;
-  top: 135px;
-  left: 540px;
+  background-color: black;
+  left: 42%;
+  bottom: 40%;
+}
+
+.startButton {
+  padding: 10px;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: 40%;
+}
+
+.counter {
+  border: solid grey;
+  background-color: black;
+  color: red;
+  margin: 15px auto;
+  width: 30%;
+  height: 20%;
 }

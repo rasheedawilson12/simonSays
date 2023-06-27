@@ -9,6 +9,7 @@ const startButton = document.querySelector(".startButton");
 const info = document.querySelector(".info");
 const heading = document.querySelector(".heading");
 const gameContainer = document.querySelector(".simon");
+const counter = counter;
 
 function resetGame(text) {
   alert(text);
