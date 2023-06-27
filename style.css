@@ -27,26 +27,26 @@ h1 {
 
 .topLeftPanel {
   border-top-left-radius: 100%;
-  background-color: green;
+  background-color: forestgreen;
 }
 
 .topRightPanel {
   border-top-right-radius: 100%;
-  background-color: red;
+  background-color: firebrick;
 }
 
 .bottomLeftPanel {
   border-bottom-left-radius: 100%;
-  background-color: yellow;
+  background-color: gold;
 }
 
 .bottomRightPanel {
   border-bottom-right-radius: 100%;
-  background-color: blue;
+  background-color: mediumblue;
 }
 
 .active {
-  opacity: 100%;
+  filter: brightness(200%);
 }
 
 .hidden {
@@ -116,14 +116,21 @@ h1 {
   width: 33%;
 }
 
+.reset:hover,
+.power:hover,
+.last:hover {
+  cursor: pointer;
+}
+
 .counter {
   border: solid grey;
   background-color: black;
   color: red;
   margin: 15px auto;
+  padding: 10px;
   width: 25%;
   height: 20%;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
   text-align: center;
   vertical-align: middle;

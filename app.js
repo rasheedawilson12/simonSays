@@ -18,6 +18,7 @@ function resetGame() {
   playerSequence = [];
   level = 0;
   gameContainer.classList.add("unclickable");
+  counter.innerHTML = "0";
 }
 
 // make panels unlickable while it is the computers turn
