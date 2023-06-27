@@ -13,8 +13,7 @@ const gameContainer = document.querySelector(".simon");
 const counter = document.querySelector(".counter");
 
 // reset game function
-function resetGame(text) {
-  alert(text);
+function resetGame() {
   sequence = [];
   playerSequence = [];
   level = 0;
