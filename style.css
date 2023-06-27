@@ -1,6 +1,8 @@
 .simon {
   margin: 100px auto;
   text-align: center;
+  background-color: black;
+  border-radius: 50%;
 }
 
 .panel {
@@ -28,4 +30,19 @@
 .bottomRightPanel {
   border-bottom-right-radius: 100%;
   background-color: blue;
+}
+
+.active {
+  background-color: blueviolet;
+}
+
+.center {
+  display: inline-block;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: gray;
+  top: 135px;
+  left: 540px;
 }

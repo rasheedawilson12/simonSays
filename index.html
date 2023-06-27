@@ -7,9 +7,10 @@
     <title>Document</title>
   </head>
   <body>
+    <button class="startButton" onclick="startGame()">START</button>
     <div class="simon">
       <div class="topRow">
-        <div class="panel topLeftPanel"></div>
+        <div class="panel topLeftPanel" onclick="toggleColor()"></div>
         <div class="panel topRightPanel"></div>
       </div>
       <div class="bottomRow">
@@ -17,5 +18,8 @@
         <div class="panel bottomRightPanel"></div>
       </div>
     </div>
+    <!-- <div class="center"></div> -->
+
+    <script src="app.js"></script>
   </body>
 </html>
