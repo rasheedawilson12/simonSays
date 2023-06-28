@@ -26,6 +26,7 @@ function resetGame() {
   win.classList.add("hidden");
   gameContainer.classList.remove("hidden");
   power.classList.remove("powerOn");
+  body.style.backgroundColor = "white";
 }
 
 // reset game function
@@ -37,6 +38,7 @@ function resetWin() {
   win.classList.add("hidden");
   gameContainer.classList.remove("hidden");
   power.classList.remove("powerOn");
+  body.style.backgroundColor = "white";
 }
 
 // reset game function
@@ -48,6 +50,7 @@ function resetLose() {
   lose.classList.add("hidden");
   gameContainer.classList.remove("hidden");
   power.classList.remove("powerOn");
+  body.style.backgroundColor = "white";
 }
 
 // make panels unlickable while it is the computers turn
@@ -135,11 +138,13 @@ const lastSequence = (color, index) => {
 const loseState = () => {
   gameContainer.classList.add("hidden");
   lose.classList.remove("hidden");
+  body.style.backgroundColor = "lightBlue";
 };
 
 const winState = () => {
   gameContainer.classList.add("hidden");
   win.classList.remove("hidden");
+  body.style.backgroundColor = "salmon";
 };
 
 function startGame() {

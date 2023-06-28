@@ -1,16 +1,9 @@
-/* media queries */
-
-/* ------- DESKTOP -------- */
-
-@media screen and (min-width: 1200px) {
-}
-
 h1 {
   text-align: center;
   color: white;
 }
 
-.button:hover {
+button:hover {
   cursor: pointer;
 }
 
@@ -193,4 +186,8 @@ h1 {
   text-align: center;
   width: 50%;
   margin: 150px auto;
+}
+
+.mobileControls {
+  display: none;
 }
