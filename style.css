@@ -31,8 +31,8 @@ h1 {
   filter: brightness(200%);
 }
 
-.panel:hover {
-  filter: brightness(200%);
+.panel:active {
+  filter: brightness(100%);
 }
 
 .topLeftPanel {
@@ -141,6 +141,12 @@ h1 {
 .last:hover {
   filter: brightness(200%);
   cursor: pointer;
+}
+
+.reset:active,
+.power:active,
+.last:active {
+  filter: brightness(100%);
 }
 
 .counter {
