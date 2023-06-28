@@ -1,29 +1,158 @@
 /* media queries */
 
-h1 {
-  text-align: center;
-  color: white;
+/* ------- DESKTOP -------- */
+
+@media screen and (min-width: 1800px) {
+  h1 {
+    text-align: center;
+    color: white;
+  }
+
+  .simon {
+    margin: 100px auto;
+    padding: 23px 0;
+    text-align: center;
+    background-color: black;
+    border-radius: 50%;
+    width: 38%;
+    height: 55%;
+  }
+
+  .panel {
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    border: 10px solid black;
+    cursor: pointer;
+  }
+
+  .topLeftPanel {
+    border-top-left-radius: 100%;
+    background-color: forestgreen;
+  }
+
+  .topRightPanel {
+    border-top-right-radius: 100%;
+    background-color: firebrick;
+  }
+
+  .bottomLeftPanel {
+    border-bottom-left-radius: 100%;
+    background-color: gold;
+  }
+
+  .bottomRightPanel {
+    border-bottom-right-radius: 100%;
+    background-color: mediumblue;
+  }
+  .innerCircle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background-color: black;
+    left: 42%;
+    bottom: 41%;
+    z-index: 1;
+  }
+
+  .startButton {
+    padding: 10px;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: silver;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px auto;
+    width: 75%;
+  }
+  .reset {
+    background-color: gold;
+    border-radius: 50%;
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+
+  .power {
+    background-color: firebrick;
+    border-radius: 50%;
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+  .last {
+    background-color: mediumblue;
+    border-radius: 50%;
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+
+  .titles {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px auto;
+    width: 100%;
+    color: white;
+    height: 2vh;
+  }
+
+  .title {
+    width: 33%;
+  }
+  .counter {
+    border: solid grey;
+    background-color: black;
+    color: red;
+    margin: 15px auto;
+    padding: 10px;
+    width: 25%;
+    height: 20%;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .loseState {
+    text-align: center;
+    width: 50%;
+    margin: 150px auto;
+  }
+
+  .loseStateImg {
+    width: 100%;
+  }
+
+  .playAgain {
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: black;
+    color: #ff96af;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .winState {
+    text-align: center;
+    width: 50%;
+    margin: 150px auto;
+  }
 }
+
+/* ------- GENERAL CSS RULES -------- */
 
 .button:hover {
-  cursor: pointer;
-}
-
-.simon {
-  margin: 100px auto;
-  padding: 23px 0;
-  text-align: center;
-  background-color: black;
-  border-radius: 50%;
-  width: 38%;
-  height: 55%;
-}
-
-.panel {
-  display: inline-block;
-  height: 300px;
-  width: 300px;
-  border: 10px solid black;
   cursor: pointer;
 }
 
@@ -33,26 +162,6 @@ h1 {
 
 .panel:active {
   filter: brightness(100%);
-}
-
-.topLeftPanel {
-  border-top-left-radius: 100%;
-  background-color: forestgreen;
-}
-
-.topRightPanel {
-  border-top-right-radius: 100%;
-  background-color: firebrick;
-}
-
-.bottomLeftPanel {
-  border-bottom-left-radius: 100%;
-  background-color: gold;
-}
-
-.bottomRightPanel {
-  border-bottom-right-radius: 100%;
-  background-color: mediumblue;
 }
 
 .unclickable {
@@ -67,73 +176,8 @@ h1 {
   display: none;
 }
 
-.innerCircle {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 100%;
-  background-color: black;
-  left: 42%;
-  bottom: 41%;
-  z-index: 1;
-}
-
-.startButton {
-  padding: 10px;
-  border-radius: 15px;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-size: 40px;
-  color: silver;
-  font-weight: bold;
-  letter-spacing: 5px;
-  text-align: center;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 8px auto;
-  width: 75%;
-}
-.reset {
-  background-color: gold;
-  border-radius: 50%;
-  height: 2.5vh;
-  width: 2.5vh;
-}
-
-.power {
-  background-color: firebrick;
-  border-radius: 50%;
-  height: 2.5vh;
-  width: 2.5vh;
-}
-
 .powerOn {
   background-color: red;
-}
-
-.last {
-  background-color: mediumblue;
-  border-radius: 50%;
-  height: 2.5vh;
-  width: 2.5vh;
-}
-
-.titles {
-  display: flex;
-  justify-content: space-between;
-  margin: 3px auto;
-  width: 100%;
-  color: white;
-  height: 2vh;
-}
-
-.title {
-  width: 33%;
 }
 
 .reset:hover,
@@ -147,45 +191,4 @@ h1 {
 .power:active,
 .last:active {
   filter: brightness(100%);
-}
-
-.counter {
-  border: solid grey;
-  background-color: black;
-  color: red;
-  margin: 15px auto;
-  padding: 10px;
-  width: 25%;
-  height: 20%;
-  font-size: 50px;
-  font-weight: bold;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.loseState {
-  text-align: center;
-  width: 50%;
-  margin: 150px auto;
-}
-
-.loseStateImg {
-  width: 100%;
-}
-
-.playAgain {
-  margin: 10px auto;
-  padding: 10px;
-  border-radius: 20px;
-  background-color: black;
-  color: #ff96af;
-  font-size: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.winState {
-  text-align: center;
-  width: 50%;
-  margin: 150px auto;
 }
