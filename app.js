@@ -15,6 +15,13 @@ const counter = document.querySelector(".counter");
 const lose = document.querySelector(".loseState");
 const win = document.querySelector(".winState");
 const power = document.querySelector(".power");
+const rules = document.querySelector(".rules");
+
+// show the game board
+const showBoard = () => {
+  rules.classList.add("hidden");
+  gameContainer.classList.remove("hidden");
+};
 
 // reset game function
 function resetGame() {

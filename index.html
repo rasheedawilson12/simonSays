@@ -11,7 +11,31 @@
     />
   </head>
   <body>
-    <div class="simon">
+    <div class="rules">
+      <h1>Simon Says</h1>
+      <h2>RULES</h2>
+      <ul>
+        <li>Press the Power button to turn on the game.</li>
+        <li>
+          The computer will start with flash a light on the board. When it is
+          your turn follow the light in the same order.
+        </li>
+        <li>The computer will add a color to the pattern for every turn.</li>
+        <li>
+          If you press the wrong button, YOU LOSE! If you can follow the pattern
+          for 20 rounds, YOU WIN!
+        </li>
+        <img
+          src="https://web.pdx.edu/~kherb2/project2-simon-game/images/simon-1.png"
+          alt=""
+          class="rulesImg"
+          onclick="showBoard()"
+        />
+
+        <h2>Click the picture to start the game</h2>
+      </ul>
+    </div>
+    <div class="simon hidden">
       <div class="topRow">
         <div class="panel topLeftPanel" data-panel="green"></div>
         <div class="panel topRightPanel" data-panel="red"></div>
@@ -36,20 +60,6 @@
         <div class="panel bottomLeftPanel" data-panel="yellow"></div>
         <div class="panel bottomRightPanel" data-panel="blue"></div>
       </div>
-    </div>
-    <div class="mobileControls">
-      <div class="startButton">SIMON</div>
-      <div class="buttons">
-        <div class="reset button" onclick="resetGame()"></div>
-        <div class="power button" onclick="startGame()"></div>
-        <div class="last button" onclick="lastSequence()"></div>
-      </div>
-      <div class="titles">
-        <div class="title">Reset</div>
-        <div class="title">Power</div>
-        <div class="title">Last</div>
-      </div>
-      <div class="counter"></div>
     </div>
     <div class="loseState hidden">
       <img

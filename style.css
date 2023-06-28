@@ -1,9 +1,32 @@
 h1 {
   text-align: center;
-  color: white;
 }
 
 button:hover {
+  cursor: pointer;
+}
+
+li {
+  font-size: 25px;
+  text-align: left;
+  line-height: 45px;
+}
+
+.rules {
+  background-color: #00e7ff;
+  border: 8px dashed #0014ff;
+  width: 50%;
+  margin: 100px auto;
+  text-align: center;
+  color: black;
+}
+
+.rulesImg {
+  width: 50%;
+}
+
+.rulesImg:hover {
+  transform: scale(1.2);
   cursor: pointer;
 }
 
