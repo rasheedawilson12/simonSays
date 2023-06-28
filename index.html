@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Simon Says</title>
   </head>
   <body>
-    <h1 class="heading">Simon Says</h1>
     <div class="simon">
       <div class="topRow">
         <div class="panel topLeftPanel" data-panel="green"></div>
@@ -15,11 +14,11 @@
       </div>
       <div class="center">
         <div class="innerCircle">
-          <div class="startButton"></div>
+          <div class="startButton">SIMON</div>
           <div class="buttons">
-            <div class="reset" onclick="resetGame()"></div>
-            <div class="power" onclick="startGame()"></div>
-            <div class="last" onclick="lastSequence()"></div>
+            <div class="reset button" onclick="resetGame()"></div>
+            <div class="power button" onclick="startGame()"></div>
+            <div class="last button" onclick="lastSequence()"></div>
           </div>
           <div class="titles">
             <div class="title">Reset</div>
@@ -34,7 +33,14 @@
         <div class="panel bottomRightPanel" data-panel="blue"></div>
       </div>
     </div>
-    <span class="info hidden"></span>
+    <div class="loseState hidden">
+      <img
+        src="https://steamuserimages-a.akamaihd.net/ugc/449609914498904429/513D070A0C6CEDC071A3001A8335375DF291F6B6/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
+        alt=""
+        class="loseStateImg"
+      />
+      <button class="playAgain" onclick="resetGame()">Play Again</button>
+    </div>
 
     <script src="app.js"></script>
   </body>

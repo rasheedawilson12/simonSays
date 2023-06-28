@@ -1,6 +1,12 @@
+/* media queries */
+
 h1 {
   text-align: center;
   color: white;
+}
+
+.button:hover {
+  cursor: pointer;
 }
 
 .simon {
@@ -45,9 +51,9 @@ h1 {
   background-color: mediumblue;
 }
 
-/* .unclickable {
+.unclickable {
   pointer-events: none;
-} */
+}
 
 .active {
   filter: brightness(200%);
@@ -64,7 +70,7 @@ h1 {
   border-radius: 100%;
   background-color: black;
   left: 42%;
-  bottom: 37%;
+  bottom: 41%;
   z-index: 1;
 }
 
@@ -72,8 +78,13 @@ h1 {
   padding: 10px;
   border-radius: 15px;
   margin: 0 auto;
-  margin-top: 25%;
+  margin-top: 30px;
   margin-bottom: 10px;
+  font-size: 40px;
+  color: grey;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-align: center;
 }
 
 .buttons {
@@ -138,4 +149,25 @@ h1 {
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
+}
+
+.loseState {
+  text-align: center;
+  width: 50%;
+  margin: 150px auto;
+}
+
+.loseStateImg {
+  width: 100%;
+}
+
+.playAgain {
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: black;
+  color: #ff96af;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
 }

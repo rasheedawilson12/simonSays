@@ -6,19 +6,22 @@ let playerSequence = [];
 let level = 0;
 
 // query selectors
+const body = document.querySelector("body");
 const startButton = document.querySelector(".startButton");
 const info = document.querySelector(".info");
 const heading = document.querySelector(".heading");
 const gameContainer = document.querySelector(".simon");
 const counter = document.querySelector(".counter");
+const lose = document.querySelector(".loseState");
 
 // reset game function
 function resetGame() {
   sequence = [];
   playerSequence = [];
   level = 0;
-  gameContainer.classList.add("unclickable");
   counter.innerHTML = "0";
+  lose.classList.add("hidden");
+  gameContainer.className.remove("hidden");
 }
 
 // make panels unlickable while it is the computers turn
@@ -78,8 +81,7 @@ function playerInput(panel) {
   // compare the player input to the computer sequence
   // lose state
   if (playerSequence[index] !== sequence[index]) {
-    alert("Oops! Game over, you pressed the wrong panel");
-    return;
+    loseState();
   }
   // win state
   if (playerSequence.length === sequence.length) {
@@ -89,7 +91,6 @@ function playerInput(panel) {
     }
 
     playerSequence = [];
-    info.textContent = "Success! Keep going!";
     setTimeout(() => {
       nextRound();
     }, 1000);
@@ -97,12 +98,18 @@ function playerInput(panel) {
   }
 }
 
+// playback current sequence function for player
 const lastSequence = (color, index) => {
   sequence.forEach((color, index) => {
     setTimeout(() => {
       flashColor(color);
     }, (index + 1) * 600);
   });
+};
+
+const loseState = () => {
+  gameContainer.classList.add("hidden");
+  lose.classList.remove("hidden");
 };
 
 function startGame() {
