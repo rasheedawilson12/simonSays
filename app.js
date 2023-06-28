@@ -13,9 +13,31 @@ const heading = document.querySelector(".heading");
 const gameContainer = document.querySelector(".simon");
 const counter = document.querySelector(".counter");
 const lose = document.querySelector(".loseState");
+const win = document.querySelector(".winState");
 
 // reset game function
 function resetGame() {
+  sequence = [];
+  playerSequence = [];
+  level = 0;
+  counter.innerHTML = "0";
+  lose.classList.add("hidden");
+  win.classList.add("hidden");
+  gameContainer.classList.remove("hidden");
+}
+
+// reset game function
+function resetWin() {
+  sequence = [];
+  playerSequence = [];
+  level = 0;
+  counter.innerHTML = "0";
+  win.classList.add("hidden");
+  gameContainer.classList.remove("hidden");
+}
+
+// reset game function
+function resetLose() {
   sequence = [];
   playerSequence = [];
   level = 0;
@@ -80,21 +102,21 @@ function playerInput(panel) {
   const index = playerSequence.push(panel) - 1;
   // compare the player input to the computer sequence
   // lose state
+  // win state
+  // check to see if the player's turn has finished
+  if (playerSequence.length === sequence.length) {
+    if (level === 5) {
+      winState();
+    } else {
+      playerSequence = [];
+      setTimeout(() => {
+        nextRound();
+      }, 1000);
+    }
+  }
+
   if (playerSequence[index] !== sequence[index]) {
     loseState();
-  }
-  // win state
-  if (playerSequence.length === sequence.length) {
-    if (playerSequence.length === 20) {
-      alert("Congrats! You completed all the levels");
-      return;
-    }
-
-    playerSequence = [];
-    setTimeout(() => {
-      nextRound();
-    }, 1000);
-    return;
   }
 }
 

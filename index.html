@@ -7,7 +7,7 @@
     <title>Simon Says</title>
   </head>
   <body>
-    <div class="simon">
+    <div class="simon hidden">
       <div class="topRow">
         <div class="panel topLeftPanel" data-panel="green"></div>
         <div class="panel topRightPanel" data-panel="red"></div>
@@ -39,6 +39,10 @@
         alt=""
         class="loseStateImg"
       />
+      <button class="playAgain" onclick="resetGame()">Play Again</button>
+    </div>
+    <div class="winState">
+      <img src="https://i.gifer.com/755t.gif" alt="" class="loseStateImg" />
       <button class="playAgain" onclick="resetGame()">Play Again</button>
     </div>
 

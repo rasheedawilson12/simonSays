@@ -171,3 +171,9 @@ h1 {
   font-weight: bold;
   text-transform: uppercase;
 }
+
+.winState {
+  text-align: center;
+  width: 50%;
+  margin: 150px auto;
+}
