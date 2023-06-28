@@ -14,6 +14,7 @@ const gameContainer = document.querySelector(".simon");
 const counter = document.querySelector(".counter");
 const lose = document.querySelector(".loseState");
 const win = document.querySelector(".winState");
+const power = document.querySelector(".power");
 
 // reset game function
 function resetGame() {
@@ -24,6 +25,7 @@ function resetGame() {
   lose.classList.add("hidden");
   win.classList.add("hidden");
   gameContainer.classList.remove("hidden");
+  power.classList.remove("powerOn");
 }
 
 // reset game function
@@ -34,6 +36,7 @@ function resetWin() {
   counter.innerHTML = "0";
   win.classList.add("hidden");
   gameContainer.classList.remove("hidden");
+  power.classList.remove("powerOn");
 }
 
 // reset game function
@@ -44,6 +47,7 @@ function resetLose() {
   counter.innerHTML = "0";
   lose.classList.add("hidden");
   gameContainer.classList.remove("hidden");
+  power.classList.remove("powerOn");
 }
 
 // make panels unlickable while it is the computers turn
@@ -142,6 +146,7 @@ function startGame() {
   sequence = [];
   playerSequence = [];
   level = 0;
+  power.classList.add("powerOn");
   nextRound();
 }
 
