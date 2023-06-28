@@ -21,7 +21,7 @@ function resetGame() {
   level = 0;
   counter.innerHTML = "0";
   lose.classList.add("hidden");
-  gameContainer.className.remove("hidden");
+  gameContainer.classList.remove("hidden");
 }
 
 // make panels unlickable while it is the computers turn
