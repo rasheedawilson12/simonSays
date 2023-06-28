@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Simon Says</title>
+    <link
+      rel="icon"
+      href="https://cdn3.iconfinder.com/data/icons/retro-tech/60/Retro_Tech_-_Flat_-_054_-_Simon_Says-512.png"
+    />
   </head>
   <body>
-    <div class="simon hidden">
+    <div class="simon">
       <div class="topRow">
         <div class="panel topLeftPanel" data-panel="green"></div>
         <div class="panel topRightPanel" data-panel="red"></div>
@@ -39,11 +43,11 @@
         alt=""
         class="loseStateImg"
       />
-      <button class="playAgain" onclick="resetGame()">Play Again</button>
+      <button class="playAgain" onclick="resetLose()">Play Again</button>
     </div>
-    <div class="winState">
+    <div class="winState hidden">
       <img src="https://i.gifer.com/755t.gif" alt="" class="loseStateImg" />
-      <button class="playAgain" onclick="resetGame()">Play Again</button>
+      <button class="playAgain" onclick="resetWin()">Play Again</button>
     </div>
 
     <script src="app.js"></script>

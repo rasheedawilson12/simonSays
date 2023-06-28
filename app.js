@@ -102,10 +102,13 @@ function playerInput(panel) {
   const index = playerSequence.push(panel) - 1;
   // compare the player input to the computer sequence
   // lose state
+  if (playerSequence[index] !== sequence[index]) {
+    loseState();
+  }
   // win state
   // check to see if the player's turn has finished
   if (playerSequence.length === sequence.length) {
-    if (level === 5) {
+    if (sequence.length === 5) {
       winState();
     } else {
       playerSequence = [];
@@ -113,10 +116,6 @@ function playerInput(panel) {
         nextRound();
       }, 1000);
     }
-  }
-
-  if (playerSequence[index] !== sequence[index]) {
-    loseState();
   }
 }
 
@@ -132,6 +131,11 @@ const lastSequence = (color, index) => {
 const loseState = () => {
   gameContainer.classList.add("hidden");
   lose.classList.remove("hidden");
+};
+
+const winState = () => {
+  gameContainer.classList.add("hidden");
+  win.classList.remove("hidden");
 };
 
 function startGame() {
