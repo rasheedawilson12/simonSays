@@ -1,59 +1,591 @@
+/*  ------- MEDIA QUERIES --------------- */
+
+/*  -------------- DESKTOP ------------ */
+@media screen and (max-width: 2480px) {
+  body {
+    background-color: blueviolet;
+  }
+  li {
+    font-size: 25px;
+    text-align: left;
+    line-height: 45px;
+  }
+
+  .rules {
+    background-color: #00e7ff;
+    border: 8px dashed #0014ff;
+    width: 50%;
+    margin: 100px auto;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    border-radius: 10%;
+  }
+
+  .rulesImg {
+    margin-top: 15px;
+    width: 25%;
+  }
+
+  .rulesImg:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+  .wrapper {
+    margin: 75px auto;
+    border: solid blue;
+    width: 50%;
+  }
+  .simon {
+    margin: 150px auto;
+    border: solid black;
+    background-color: black;
+    width: 65%;
+    border-radius: 100%;
+    padding: 5px;
+  }
+
+  .panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    border: 8px solid black;
+    cursor: pointer;
+  }
+  .topRow {
+    height: 25vh;
+    width: 100%;
+    display: flex;
+  }
+
+  .topLeftPanel {
+    border-top-left-radius: 100%;
+    background-color: forestgreen;
+  }
+
+  .topRightPanel {
+    border-top-right-radius: 100%;
+    background-color: firebrick;
+  }
+
+  .bottomRow {
+    height: 25vh;
+    width: 100%;
+    display: flex;
+  }
+
+  .bottomLeftPanel {
+    border-bottom-left-radius: 100%;
+    background-color: gold;
+  }
+
+  .bottomRightPanel {
+    border-bottom-right-radius: 100%;
+    background-color: mediumblue;
+  }
+  .innerCircle {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background-color: black;
+    z-index: 1;
+  }
+
+  .startButton {
+    padding: 10px;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: silver;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px auto;
+    width: 75%;
+  }
+  .reset {
+    background-color: gold;
+    border-radius: 50%;
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+
+  .power {
+    background-color: firebrick;
+    border-radius: 50%;
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+  .last {
+    background-color: mediumblue;
+    border-radius: 50%;
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+
+  .titles {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px auto;
+    width: 100%;
+    color: white;
+    height: 2vh;
+    text-align: center;
+  }
+
+  .title {
+    width: 33%;
+  }
+  .counter {
+    border: solid grey;
+    background-color: black;
+    color: red;
+    margin: 15px auto;
+    padding: 10px;
+    width: 25%;
+    height: 20%;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .loseState {
+    text-align: center;
+    width: 50%;
+    margin: 150px auto;
+  }
+
+  .loseStateImg {
+    width: 100%;
+  }
+
+  .playAgain {
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: black;
+    color: #ff96af;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .winState {
+    text-align: center;
+    width: 50%;
+    margin: 150px auto;
+  }
+}
+
+/* --------------- MID (IPAD/TABLET) ------------ */
+@media screen and (max-width: 1400px) {
+  body {
+    background-color: orange;
+  }
+  li {
+    font-size: 25px;
+    text-align: left;
+    line-height: 45px;
+  }
+
+  .rules {
+    background-color: #00e7ff;
+    border: 8px dashed #0014ff;
+    width: 50%;
+    margin: 100px auto;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    border-radius: 10%;
+  }
+
+  .rulesImg {
+    margin-top: 15px;
+    width: 25%;
+  }
+
+  .rulesImg:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+  .wrapper {
+    margin: 75px auto;
+    border: solid blue;
+    width: 60%;
+  }
+  .simon {
+    margin: 100px auto;
+    border: solid black;
+    background-color: black;
+    width: 65%;
+    border-radius: 100%;
+    padding: 5px;
+  }
+
+  .panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    border: 8px solid black;
+    cursor: pointer;
+  }
+  .topRow {
+    height: 25vh;
+    width: 100%;
+    display: flex;
+  }
+
+  .topLeftPanel {
+    border-top-left-radius: 100%;
+    background-color: forestgreen;
+  }
+
+  .topRightPanel {
+    border-top-right-radius: 100%;
+    background-color: firebrick;
+  }
+
+  .bottomRow {
+    height: 25vh;
+    width: 100%;
+    display: flex;
+  }
+
+  .bottomLeftPanel {
+    border-bottom-left-radius: 100%;
+    background-color: gold;
+  }
+
+  .bottomRightPanel {
+    border-bottom-right-radius: 100%;
+    background-color: mediumblue;
+  }
+
+  .innerCircle {
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background-color: black;
+    z-index: 1;
+  }
+
+  .startButton {
+    padding: 10px;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: silver;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px auto;
+    width: 75%;
+  }
+  .reset {
+    background-color: gold;
+    border-radius: 50%;
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+
+  .power {
+    background-color: firebrick;
+    border-radius: 50%;
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+  .last {
+    background-color: mediumblue;
+    border-radius: 50%;
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+
+  .titles {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px auto;
+    width: 100%;
+    color: white;
+    height: 2vh;
+    text-align: center;
+  }
+
+  .title {
+    width: 33%;
+  }
+  .counter {
+    border: solid grey;
+    background-color: black;
+    color: red;
+    margin: 15px auto;
+    padding: 10px;
+    width: 25%;
+    height: 20%;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .loseState {
+    text-align: center;
+    width: 50%;
+    margin: 150px auto;
+  }
+
+  .loseStateImg {
+    width: 100%;
+  }
+
+  .playAgain {
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: black;
+    color: #ff96af;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .winState {
+    text-align: center;
+    width: 50%;
+    margin: 150px auto;
+  }
+}
+/* ------------- mobile ------------ */
+@media screen and (max-width: 880px) {
+  body {
+    background-color: pink;
+  }
+  li {
+    font-size: 25px;
+    text-align: left;
+    line-height: 45px;
+  }
+
+  .rules {
+    background-color: #00e7ff;
+    border: 8px dashed #0014ff;
+    width: 50%;
+    margin: 100px auto;
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    border-radius: 10%;
+  }
+
+  .rulesImg {
+    margin-top: 15px;
+    width: 25%;
+  }
+
+  .rulesImg:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+
+  .wrapper {
+    margin: 75px auto;
+    border: solid blue;
+    width: 100%;
+  }
+  .simon {
+    margin: 100px auto;
+    border: solid black;
+    background-color: black;
+    width: 65%;
+    border-radius: 100%;
+    padding: 5px;
+  }
+
+  .panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    border: 8px solid black;
+    cursor: pointer;
+  }
+  .topRow {
+    height: 25vh;
+    width: 100%;
+    display: flex;
+  }
+
+  .topLeftPanel {
+    border-top-left-radius: 100%;
+    background-color: forestgreen;
+  }
+
+  .topRightPanel {
+    border-top-right-radius: 100%;
+    background-color: firebrick;
+  }
+
+  .bottomRow {
+    height: 25vh;
+    width: 100%;
+    display: flex;
+  }
+
+  .bottomLeftPanel {
+    border-bottom-left-radius: 100%;
+    background-color: gold;
+  }
+
+  .bottomRightPanel {
+    border-bottom-right-radius: 100%;
+    background-color: mediumblue;
+  }
+  .innerCircle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background-color: black;
+    left: 33%;
+    bottom: 41%;
+    z-index: 1;
+  }
+
+  .startButton {
+    padding: 10px;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: silver;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-align: center;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px auto;
+    width: 75%;
+  }
+  .reset {
+    background-color: gold;
+    border-radius: 50%;
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+
+  .power {
+    background-color: firebrick;
+    border-radius: 50%;
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+  .last {
+    background-color: mediumblue;
+    border-radius: 50%;
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+
+  .titles {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px auto;
+    width: 100%;
+    color: white;
+    height: 2vh;
+    text-align: center;
+  }
+
+  .title {
+    width: 33%;
+  }
+  .counter {
+    border: solid grey;
+    background-color: black;
+    color: red;
+    margin: 15px auto;
+    padding: 10px;
+    width: 25%;
+    height: 20%;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .loseState {
+    text-align: center;
+    width: 50%;
+    margin: 150px auto;
+  }
+
+  .loseStateImg {
+    width: 100%;
+  }
+
+  .playAgain {
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: black;
+    color: #ff96af;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .winState {
+    text-align: center;
+    width: 50%;
+    margin: 150px auto;
+  }
+}
+
+/* --------------- GENERAL CSS RULES --------- */
+
 h1 {
   text-align: center;
 }
 
 button:hover {
-  cursor: pointer;
-}
-
-li {
-  font-size: 25px;
-  text-align: left;
-  line-height: 45px;
-}
-
-.rules {
-  background-color: #00e7ff;
-  border: 8px dashed #0014ff;
-  width: 50%;
-  margin: 100px auto;
-  text-align: center;
-  text-transform: uppercase;
-  color: black;
-  border-radius: 10%;
-}
-
-.rulesImg {
-  margin-top: 15px;
-  width: 25%;
-}
-
-.rulesImg:hover {
-  transform: scale(1.2);
-  cursor: pointer;
-}
-
-.wrapper {
-  margin: 75px auto;
-  border: solid blue;
-  width: 50%;
-}
-.simon {
-  margin: 100px auto;
-  border: solid black;
-  background-color: black;
-  width: 65%;
-  border-radius: 100%;
-  padding: 5px;
-}
-
-.panel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  text-align: center;
-  border: 8px solid black;
   cursor: pointer;
 }
 
@@ -63,38 +595,6 @@ li {
 
 .panel:active {
   filter: brightness(100%);
-}
-
-.topRow {
-  height: 25vh;
-  width: 100%;
-  display: flex;
-}
-
-.topLeftPanel {
-  border-top-left-radius: 100%;
-  background-color: forestgreen;
-}
-
-.topRightPanel {
-  border-top-right-radius: 100%;
-  background-color: firebrick;
-}
-
-.bottomRow {
-  height: 25vh;
-  width: 100%;
-  display: flex;
-}
-
-.bottomLeftPanel {
-  border-bottom-left-radius: 100%;
-  background-color: gold;
-}
-
-.bottomRightPanel {
-  border-bottom-right-radius: 100%;
-  background-color: mediumblue;
 }
 
 .unclickable {
@@ -109,74 +609,8 @@ li {
   display: none;
 }
 
-.innerCircle {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border-radius: 100%;
-  background-color: black;
-  left: 42%;
-  bottom: 41%;
-  z-index: 1;
-}
-
-.startButton {
-  padding: 10px;
-  border-radius: 15px;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-size: 40px;
-  color: silver;
-  font-weight: bold;
-  letter-spacing: 5px;
-  text-align: center;
-}
-
-.buttons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 8px auto;
-  width: 75%;
-}
-.reset {
-  background-color: gold;
-  border-radius: 50%;
-  height: 2.5vh;
-  width: 2.5vh;
-}
-
-.power {
-  background-color: firebrick;
-  border-radius: 50%;
-  height: 2.5vh;
-  width: 2.5vh;
-}
-
 .powerOn {
   background-color: red;
-}
-
-.last {
-  background-color: mediumblue;
-  border-radius: 50%;
-  height: 2.5vh;
-  width: 2.5vh;
-}
-
-.titles {
-  display: flex;
-  justify-content: space-between;
-  margin: 3px auto;
-  width: 100%;
-  color: white;
-  height: 2vh;
-  text-align: center;
-}
-
-.title {
-  width: 33%;
 }
 
 .reset:hover,
@@ -190,47 +624,6 @@ li {
 .power:active,
 .last:active {
   filter: brightness(100%);
-}
-
-.counter {
-  border: solid grey;
-  background-color: black;
-  color: red;
-  margin: 15px auto;
-  padding: 10px;
-  width: 25%;
-  height: 20%;
-  font-size: 50px;
-  font-weight: bold;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.loseState {
-  text-align: center;
-  width: 50%;
-  margin: 150px auto;
-}
-
-.loseStateImg {
-  width: 100%;
-}
-
-.playAgain {
-  margin: 10px auto;
-  padding: 10px;
-  border-radius: 20px;
-  background-color: black;
-  color: #ff96af;
-  font-size: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.winState {
-  text-align: center;
-  width: 50%;
-  margin: 150px auto;
 }
 
 .mobileControls {
