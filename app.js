@@ -11,6 +11,7 @@ const startButton = document.querySelector(".startButton");
 const info = document.querySelector(".info");
 const heading = document.querySelector(".heading");
 const gameContainer = document.querySelector(".simon");
+const wrapper = document.querySelector(".wrapper");
 const counter = document.querySelector(".counter");
 const lose = document.querySelector(".loseState");
 const win = document.querySelector(".winState");
@@ -20,7 +21,7 @@ const rules = document.querySelector(".rules");
 // show the game board
 const showBoard = () => {
   rules.classList.add("hidden");
-  gameContainer.classList.remove("hidden");
+  wrapper.classList.remove("hidden");
 };
 
 // reset game function
@@ -31,9 +32,9 @@ function resetGame() {
   counter.innerHTML = "0";
   lose.classList.add("hidden");
   win.classList.add("hidden");
-  gameContainer.classList.remove("hidden");
+  wrapper.classList.remove("hidden");
   power.classList.remove("powerOn");
-  body.style.backgroundColor = "white";
+  body.style.backgroundColor = "#e5e3c9";
 }
 
 // reset game function
@@ -43,9 +44,9 @@ function resetWin() {
   level = 0;
   counter.innerHTML = "0";
   win.classList.add("hidden");
-  gameContainer.classList.remove("hidden");
+  wrapper.classList.remove("hidden");
   power.classList.remove("powerOn");
-  body.style.backgroundColor = "white";
+  body.style.backgroundColor = "#e5e3c9";
 }
 
 // reset game function
@@ -55,9 +56,9 @@ function resetLose() {
   level = 0;
   counter.innerHTML = "0";
   lose.classList.add("hidden");
-  gameContainer.classList.remove("hidden");
+  wrapper.classList.remove("hidden");
   power.classList.remove("powerOn");
-  body.style.backgroundColor = "white";
+  body.style.backgroundColor = "#e5e3c9";
 }
 
 // make panels unlickable while it is the computers turn
@@ -143,13 +144,13 @@ const lastSequence = (color, index) => {
 };
 
 const loseState = () => {
-  gameContainer.classList.add("hidden");
+  wrapper.classList.add("hidden");
   lose.classList.remove("hidden");
   body.style.backgroundColor = "lightBlue";
 };
 
 const winState = () => {
-  gameContainer.classList.add("hidden");
+  wrapper.classList.add("hidden");
   win.classList.remove("hidden");
   body.style.backgroundColor = "salmon";
 };

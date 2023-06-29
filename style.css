@@ -9,8 +9,8 @@
   }
 
   .rules {
-    background-color: #00e7ff;
-    border: 8px dashed #0014ff;
+    background-color: #cee5d0;
+    border: 8px dashed #94b49f;
     width: 50%;
     margin: 100px auto;
     text-align: center;
@@ -165,6 +165,10 @@
     vertical-align: middle;
   }
 
+  .hidden {
+    display: none;
+  }
+
   .loseState {
     text-align: center;
     width: 50%;
@@ -202,8 +206,8 @@
   }
 
   .rules {
-    background-color: #00e7ff;
-    border: 8px dashed #0014ff;
+    background-color: #cee5d0;
+    border: 8px dashed #94b49f;
     width: 50%;
     margin: 100px auto;
     text-align: center;
@@ -393,8 +397,8 @@
   }
 
   .rules {
-    background-color: #00e7ff;
-    border: 8px dashed #0014ff;
+    background-color: #cee5d0;
+    border: 8px dashed #94b49f;
     width: 50%;
     margin: 100px auto;
     text-align: center;
