@@ -38,10 +38,10 @@
     width: 50%;
   }
   .simon {
-    margin: 150px auto;
+    margin: 175px auto;
     border: solid black;
     background-color: black;
-    width: 65%;
+    width: 60%;
     border-radius: 100%;
     padding: 5px;
   }
@@ -233,7 +233,7 @@
     width: 60%;
   }
   .simon {
-    margin: 150px auto;
+    margin: 175px auto;
     border: solid black;
     background-color: black;
     width: 65%;
@@ -391,7 +391,7 @@
   }
 }
 /* ------------- mobile ------------ */
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 900px) {
   body {
     background-color: pink;
   }
@@ -428,7 +428,7 @@
     width: 100%;
   }
   .simon {
-    margin: 100px auto;
+    margin: 175px auto;
     border: solid black;
     background-color: black;
     width: 65%;
@@ -478,12 +478,15 @@
   }
   .innerCircle {
     position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     width: 300px;
     height: 300px;
     border-radius: 100%;
     background-color: black;
-    left: 33%;
-    bottom: 41%;
     z-index: 1;
   }
 
