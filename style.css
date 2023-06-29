@@ -18,11 +18,14 @@ li {
   width: 50%;
   margin: 100px auto;
   text-align: center;
+  text-transform: uppercase;
   color: black;
+  border-radius: 10%;
 }
 
 .rulesImg {
-  width: 50%;
+  margin-top: 15px;
+  width: 25%;
 }
 
 .rulesImg:hover {
@@ -30,21 +33,27 @@ li {
   cursor: pointer;
 }
 
+.wrapper {
+  margin: 75px auto;
+  border: solid blue;
+  width: 50%;
+}
 .simon {
   margin: 100px auto;
-  padding: 23px 0;
-  text-align: center;
+  border: solid black;
   background-color: black;
-  border-radius: 50%;
-  width: 38%;
-  height: 55%;
+  width: 65%;
+  border-radius: 100%;
+  padding: 5px;
 }
 
 .panel {
-  display: inline-block;
-  height: 300px;
-  width: 300px;
-  border: 10px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  border: 8px solid black;
   cursor: pointer;
 }
 
@@ -56,6 +65,12 @@ li {
   filter: brightness(100%);
 }
 
+.topRow {
+  height: 25vh;
+  width: 100%;
+  display: flex;
+}
+
 .topLeftPanel {
   border-top-left-radius: 100%;
   background-color: forestgreen;
@@ -64,6 +79,12 @@ li {
 .topRightPanel {
   border-top-right-radius: 100%;
   background-color: firebrick;
+}
+
+.bottomRow {
+  height: 25vh;
+  width: 100%;
+  display: flex;
 }
 
 .bottomLeftPanel {
@@ -151,6 +172,7 @@ li {
   width: 100%;
   color: white;
   height: 2vh;
+  text-align: center;
 }
 
 .title {

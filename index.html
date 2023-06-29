@@ -11,19 +11,27 @@
     />
   </head>
   <body>
-    <div class="rules">
+    <!-- <div class="rules">
       <h1>Simon Says</h1>
       <h2>RULES</h2>
       <ul>
         <li>Press the Power button to turn on the game.</li>
         <li>
-          The computer will start with flash a light on the board. When it is
-          your turn follow the light in the same order.
+          The computer will start with flash a light on the board. 
+          <li>When it is
+          your turn follow the light in the same order.</li>
+          
         </li>
+        <li>Press the Last button to repeat the current sequence.</li>
+        <li>Press the Reset button to start the game over.</li>
         <li>The computer will add a color to the pattern for every turn.</li>
         <li>
-          If you press the wrong button, YOU LOSE! If you can follow the pattern
+          If you press the wrong button, YOU LOSE! 
+        <li>
+          If you can follow the pattern
           for 20 rounds, YOU WIN!
+        </li>
+          
         </li>
         <img
           src="https://web.pdx.edu/~kherb2/project2-simon-game/images/simon-1.png"
@@ -34,34 +42,36 @@
 
         <h2>Click the picture to start the game</h2>
       </ul>
-    </div>
-    <div class="simon hidden">
-      <div class="topRow">
-        <div class="panel topLeftPanel" data-panel="green"></div>
-        <div class="panel topRightPanel" data-panel="red"></div>
-      </div>
-      <div class="center">
-        <div class="innerCircle">
-          <div class="startButton">SIMON</div>
-          <div class="buttons">
-            <div class="reset button" onclick="resetGame()"></div>
-            <div class="power button" onclick="startGame()"></div>
-            <div class="last button" onclick="lastSequence()"></div>
+    </div> -->
+    <div class="wrapper">
+      <div class="simon">
+        <div class="topRow">
+          <div class="panel topLeftPanel" data-panel="green"></div>
+          <div class="panel topRightPanel" data-panel="red"></div>
+        </div>
+        <div class="center">
+          <div class="innerCircle">
+            <div class="startButton">SIMON</div>
+            <div class="buttons">
+              <div class="reset button" onclick="resetGame()"></div>
+              <div class="power button" onclick="startGame()"></div>
+              <div class="last button" onclick="lastSequence()"></div>
+            </div>
+            <div class="titles">
+              <div class="title">Reset</div>
+              <div class="title">Power</div>
+              <div class="title">Last</div>
+            </div>
+            <div class="counter"></div>
           </div>
-          <div class="titles">
-            <div class="title">Reset</div>
-            <div class="title">Power</div>
-            <div class="title">Last</div>
-          </div>
-          <div class="counter"></div>
+        </div>
+        <div class="bottomRow">
+          <div class="panel bottomLeftPanel" data-panel="yellow"></div>
+          <div class="panel bottomRightPanel" data-panel="blue"></div>
         </div>
       </div>
-      <div class="bottomRow">
-        <div class="panel bottomLeftPanel" data-panel="yellow"></div>
-        <div class="panel bottomRightPanel" data-panel="blue"></div>
-      </div>
     </div>
-    <div class="loseState hidden">
+    <!-- <div class="loseState hidden">
       <img
         src="https://steamuserimages-a.akamaihd.net/ugc/449609914498904429/513D070A0C6CEDC071A3001A8335375DF291F6B6/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false"
         alt=""
@@ -72,7 +82,7 @@
     <div class="winState hidden">
       <img src="https://i.gifer.com/755t.gif" alt="" class="loseStateImg" />
       <button class="playAgain" onclick="resetWin()">Play Again</button>
-    </div>
+    </div> -->
 
     <script src="app.js"></script>
   </body>
