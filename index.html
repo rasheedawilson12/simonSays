@@ -11,7 +11,7 @@
     />
   </head>
   <body>
-    <div class="rules">
+    <div class="rules hidden">
       <h1>Simon Says</h1>
       <h2>RULES</h2>
       <ul>
@@ -43,11 +43,16 @@
         <h2>Click the picture to start the game</h2>
       </ul>
     </div>
-    <div class="wrapper hidden">
+    <div class="wrapper">
       <div class="simon">
         <div class="topRow">
           <div class="panel topLeftPanel" data-panel="green"></div>
           <div class="panel topRightPanel" data-panel="red"></div>
+        </div>
+        
+        <div class="bottomRow">
+          <div class="panel bottomLeftPanel" data-panel="yellow"></div>
+          <div class="panel bottomRightPanel" data-panel="blue"></div>
         </div>
         <div class="center">
           <div class="innerCircle">
@@ -65,11 +70,8 @@
             <div class="counter"></div>
           </div>
         </div>
-        <div class="bottomRow">
-          <div class="panel bottomLeftPanel" data-panel="yellow"></div>
-          <div class="panel bottomRightPanel" data-panel="blue"></div>
-        </div>
       </div>
+      
     </div>
     <div class="loseState hidden">
       <img

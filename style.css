@@ -419,13 +419,13 @@
 
   .wrapper {
     margin: 75px auto;
-    width: 100%;
+    width: 75%;
   }
   .simon {
-    margin: 160px auto;
+    margin: 90px auto;
     border: solid black;
     background-color: black;
-    width: 65%;
+    width: 75%;
     border-radius: 100%;
     padding: 5px;
   }
@@ -470,6 +470,7 @@
     border-bottom-right-radius: 100%;
     background-color: mediumblue;
   }
+
   .innerCircle {
     position: absolute;
     top: 0;
@@ -477,20 +478,20 @@
     left: 0;
     right: 0;
     margin: auto;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 100%;
     background-color: black;
     z-index: 1;
   }
 
   .startButton {
-    padding: 10px;
+    padding: 5px;
     border-radius: 15px;
     margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 25px;
     color: silver;
     font-weight: bold;
     letter-spacing: 5px;
@@ -530,7 +531,7 @@
     margin: 3px auto;
     width: 100%;
     color: white;
-    height: 2vh;
+    height: 1.5vh;
     text-align: center;
   }
 
@@ -543,9 +544,9 @@
     color: red;
     margin: 15px auto;
     padding: 10px;
-    width: 25%;
-    height: 20%;
-    font-size: 50px;
+    width: 20%;
+    height: 15%;
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
     vertical-align: middle;
