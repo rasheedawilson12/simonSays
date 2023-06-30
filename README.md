@@ -1,4 +1,6 @@
-# simonSays
+# Simon Says
+
+This project was coded for the Per Scholas Software Engineering Module OneProject for the 2023-RTT-93 cohort.
 
 A retro flex-box game based on the electronic game. Coded using HTML, CSS, & JavaScript.
 
