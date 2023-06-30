@@ -18,13 +18,14 @@ const win = document.querySelector(".winState");
 const power = document.querySelector(".power");
 const rules = document.querySelector(".rules");
 
+// 1. Show the game board
 // show the game board
 const showBoard = () => {
   rules.classList.add("hidden");
   wrapper.classList.remove("hidden");
 };
 
-// reset game function
+// reset game function from midgame
 function resetGame() {
   sequence = [];
   playerSequence = [];
@@ -37,7 +38,7 @@ function resetGame() {
   body.style.backgroundColor = "#e5e3c9";
 }
 
-// reset game function
+// reset game function from winState
 function resetWin() {
   sequence = [];
   playerSequence = [];
@@ -49,7 +50,7 @@ function resetWin() {
   body.style.backgroundColor = "#e5e3c9";
 }
 
-// reset game function
+// reset game function from loseState
 function resetLose() {
   sequence = [];
   playerSequence = [];
@@ -61,12 +62,12 @@ function resetLose() {
   body.style.backgroundColor = "#e5e3c9";
 }
 
-// make panels unlickable while it is the computers turn
+// 7. When the computer's turn is over, it is the players turn and the player can now click the panels.
 function playerTurn() {
   gameContainer.classList.remove("unclickable");
 }
 
-// toggle colors on and off during the sequence
+// 5. toggle colors on and off during the sequence when called upon in the sequence
 function flashColor(color) {
   const panel = document.querySelector(`[data-panel='${color}']`);
   panel.classList.add("active");
@@ -76,6 +77,7 @@ function flashColor(color) {
   }, 300);
 }
 
+// 4. play the round with the random sequnce of color that will flash the colors and sounds as each color is played. Set a timeout between colors so they don't all flash at once.
 function playRound(nextSequence) {
   nextSequence.forEach((color, index) => {
     setTimeout(() => {
@@ -84,7 +86,7 @@ function playRound(nextSequence) {
   });
 }
 
-// create the next step in the squence
+// 6. Create the next step in the sequence from the panels avalible.
 function nextStep() {
   // create array of functions that contain all of the panels.
   const panels = ["red", "green", "blue", "yellow"];
@@ -95,6 +97,7 @@ function nextStep() {
   return random;
 }
 
+// 3. Set up the next(or inital) round to be played
 function nextRound() {
   // increment level by one
   level++;
@@ -112,6 +115,7 @@ function nextRound() {
   }, level * 600 + 1000);
 }
 
+// 8. The computer will take the player's clicks and store them in the player sequence array and compare the player sequence to the computer's sequence. If the sequence is correct AND the player has cleared up all the levels, call winState. If the sequence is not correct, call loseState. If the squence is correct but the player hasn't cleared all the levels, call nexTRound.
 function playerInput(panel) {
   // push player cick input into player array
   const index = playerSequence.push(panel) - 1;
@@ -155,6 +159,7 @@ const winState = () => {
   body.style.backgroundColor = "salmon";
 };
 
+// 2. Start the game
 function startGame() {
   sequence = [];
   playerSequence = [];
@@ -163,6 +168,7 @@ function startGame() {
   nextRound();
 }
 
+// look into the data set in HTML and flash the colors and sounds when a particular panel is clicked.
 gameContainer.addEventListener("click", (event) => {
   const { panel } = event.target.dataset;
 
