@@ -70,7 +70,10 @@ function playerTurn() {
 // 5. toggle colors on and off during the sequence when called upon in the sequence
 function flashColor(color) {
   const panel = document.querySelector(`[data-panel='${color}']`);
+  const sound = document.querySelector(`[data-sound='${color}']`);
+
   panel.classList.add("active");
+  sound.play();
 
   setTimeout(() => {
     panel.classList.remove("active");
@@ -119,6 +122,9 @@ function nextRound() {
 function playerInput(panel) {
   // push player cick input into player array
   const index = playerSequence.push(panel) - 1;
+  // target sound data sets in HTML and play sound on each click
+  const sound = document.querySelector(`[data-sound='${panel}']`);
+  sound.play();
   // compare the player input to the computer sequence
   // lose state
   if (playerSequence[index] !== sequence[index]) {
@@ -171,6 +177,5 @@ function startGame() {
 // look into the data set in HTML and flash the colors and sounds when a particular panel is clicked.
 gameContainer.addEventListener("click", (event) => {
   const { panel } = event.target.dataset;
-
   if (panel) playerInput(panel);
 });
