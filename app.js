@@ -17,6 +17,7 @@ const lose = document.querySelector(".loseState");
 const win = document.querySelector(".winState");
 const power = document.querySelector(".power");
 const rules = document.querySelector(".rules");
+const sound = document.querySelector(".sound");
 
 // 1. Show the game board
 // show the game board
@@ -60,6 +61,7 @@ function resetLose() {
   wrapper.classList.remove("hidden");
   power.classList.remove("powerOn");
   body.style.backgroundColor = "#e5e3c9";
+  sound.classList.remove("hidden");
 }
 
 // 7. When the computer's turn is over, it is the players turn and the player can now click the panels.
@@ -125,11 +127,7 @@ function playerInput(panel) {
   // target sound data sets in HTML and play sound on each click
   const sound = document.querySelector(`[data-sound='${panel}']`);
   sound.play();
-  // compare the player input to the computer sequence
-  // lose state
-  if (playerSequence[index] !== sequence[index]) {
-    loseState();
-  }
+
   // win state
   // check to see if the player's turn has finished
   if (playerSequence.length === sequence.length) {
@@ -141,6 +139,12 @@ function playerInput(panel) {
         nextRound();
       }, 1000);
     }
+  }
+
+  // compare the player input to the computer sequence
+  // lose state
+  if (playerSequence[index] !== sequence[index]) {
+    loseState();
   }
 }
 
@@ -157,6 +161,7 @@ const loseState = () => {
   wrapper.classList.add("hidden");
   lose.classList.remove("hidden");
   body.style.backgroundColor = "lightBlue";
+  sound.classList.add("hidden");
 };
 
 const winState = () => {
