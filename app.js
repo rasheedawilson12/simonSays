@@ -159,6 +159,7 @@ const loseState = () => {
   wrapper.classList.add("hidden");
   lose.classList.remove("hidden");
   body.style.backgroundColor = "lightBlue";
+  sound.pause();
   sound.classList.add("hidden");
 };
 
