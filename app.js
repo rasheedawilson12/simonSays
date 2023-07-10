@@ -127,11 +127,15 @@ function playerInput(panel) {
   // target sound data sets in HTML and play sound on each click
   const sound = document.querySelector(`[data-sound='${panel}']`);
   sound.play();
-
+  // compare the player input to the computer sequence
+  // lose state
+  if (playerSequence[index] !== sequence[index]) {
+    loseState();
+  }
   // win state
   // check to see if the player's turn has finished
   if (playerSequence.length === sequence.length) {
-    if (sequence.length === 5) {
+    if (sequence.length === 20) {
       winState();
     } else {
       playerSequence = [];
@@ -139,12 +143,6 @@ function playerInput(panel) {
         nextRound();
       }, 1000);
     }
-  }
-
-  // compare the player input to the computer sequence
-  // lose state
-  if (playerSequence[index] !== sequence[index]) {
-    loseState();
   }
 }
 
